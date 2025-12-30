@@ -84,7 +84,7 @@
             Transactions_tab.Location = new Point(4, 32);
             Transactions_tab.Name = "Transactions_tab";
             Transactions_tab.Padding = new Padding(3);
-            Transactions_tab.Size = new Size(786, 347);
+            Transactions_tab.Size = new Size(1906, 977);
             Transactions_tab.TabIndex = 1;
             Transactions_tab.Text = "Transactions";
             // 
@@ -94,7 +94,7 @@
             Dashboard_tab.Location = new Point(4, 32);
             Dashboard_tab.Name = "Dashboard_tab";
             Dashboard_tab.Padding = new Padding(3);
-            Dashboard_tab.Size = new Size(786, 347);
+            Dashboard_tab.Size = new Size(1906, 977);
             Dashboard_tab.TabIndex = 0;
             Dashboard_tab.Text = "Dashboard";
             Dashboard_tab.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             DeliveryItems_tab.ImageKey = "Delivery.png";
             DeliveryItems_tab.Location = new Point(4, 32);
             DeliveryItems_tab.Name = "DeliveryItems_tab";
-            DeliveryItems_tab.Size = new Size(786, 347);
+            DeliveryItems_tab.Size = new Size(1906, 977);
             DeliveryItems_tab.TabIndex = 3;
             DeliveryItems_tab.Text = "Delivery";
             DeliveryItems_tab.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             Inventory_tab.ImageKey = "Inventory.png";
             Inventory_tab.Location = new Point(4, 32);
             Inventory_tab.Name = "Inventory_tab";
-            Inventory_tab.Size = new Size(786, 347);
+            Inventory_tab.Size = new Size(1906, 977);
             Inventory_tab.TabIndex = 6;
             Inventory_tab.Text = "Inventory";
             Inventory_tab.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             ReturnRefund_tab.ImageKey = "Return.png";
             ReturnRefund_tab.Location = new Point(4, 32);
             ReturnRefund_tab.Name = "ReturnRefund_tab";
-            ReturnRefund_tab.Size = new Size(786, 347);
+            ReturnRefund_tab.Size = new Size(1906, 977);
             ReturnRefund_tab.TabIndex = 5;
             ReturnRefund_tab.Text = "Return/Refund";
             ReturnRefund_tab.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             Profile_tab.ImageKey = "Profile.png";
             Profile_tab.Location = new Point(4, 32);
             Profile_tab.Name = "Profile_tab";
-            Profile_tab.Size = new Size(786, 347);
+            Profile_tab.Size = new Size(1906, 977);
             Profile_tab.TabIndex = 4;
             Profile_tab.Text = "Profile";
             Profile_tab.UseVisualStyleBackColor = true;

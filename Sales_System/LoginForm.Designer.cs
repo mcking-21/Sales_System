@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            Close_button = new PictureBox();
+            Minimize_button = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             CreateAccount_linklabel = new LinkLabel();
@@ -39,6 +41,8 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Close_button).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Minimize_button).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -49,6 +53,8 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.Controls.Add(Close_button);
+            panel2.Controls.Add(Minimize_button);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(CreateAccount_linklabel);
@@ -56,10 +62,38 @@
             panel2.Controls.Add(Login_button);
             panel2.Controls.Add(Password_textbox);
             panel2.Controls.Add(Username_textbox);
-            panel2.Location = new Point(521, 67);
+            panel2.Location = new Point(521, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(488, 645);
+            panel2.Size = new Size(488, 707);
             panel2.TabIndex = 1;
+            // 
+            // Close_button
+            // 
+            Close_button.BackColor = Color.Transparent;
+            Close_button.Image = Properties.Resources.close;
+            Close_button.Location = new Point(446, 0);
+            Close_button.Name = "Close_button";
+            Close_button.Size = new Size(42, 42);
+            Close_button.SizeMode = PictureBoxSizeMode.StretchImage;
+            Close_button.TabIndex = 7;
+            Close_button.TabStop = false;
+            Close_button.Click += Close_button_Click;
+            Close_button.MouseEnter += Close_button_MouseEnter;
+            Close_button.MouseLeave += Close_button_MouseLeave;
+            // 
+            // Minimize_button
+            // 
+            Minimize_button.BackColor = Color.Transparent;
+            Minimize_button.Image = Properties.Resources.minimize;
+            Minimize_button.Location = new Point(398, 0);
+            Minimize_button.Name = "Minimize_button";
+            Minimize_button.Size = new Size(42, 42);
+            Minimize_button.SizeMode = PictureBoxSizeMode.StretchImage;
+            Minimize_button.TabIndex = 8;
+            Minimize_button.TabStop = false;
+            Minimize_button.Click += Minimize_button_Click;
+            Minimize_button.MouseEnter += Minimize_button_MouseEnter;
+            Minimize_button.MouseLeave += Minimize_button_MouseLeave;
             // 
             // pictureBox3
             // 
@@ -211,32 +245,36 @@
             // panel1
             // 
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(-1, 64);
+            panel1.Location = new Point(-1, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(523, 648);
+            panel1.Size = new Size(523, 713);
             panel1.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = Properties.Resources.food_aesthetic;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(523, 648);
+            pictureBox1.Size = new Size(523, 713);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // Form1
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1015, 695);
+            ControlBox = false;
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Close_button).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Minimize_button).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
@@ -255,5 +293,7 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
+        private PictureBox Minimize_button;
+        private PictureBox Close_button;
     }
 }
