@@ -21,12 +21,22 @@ namespace Sales_System
             MaterialSkinManager.AddFormToManage(this);
             MaterialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             MaterialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                MaterialSkin.Primary.Red600, 
-                MaterialSkin.Primary.Red700, 
-                MaterialSkin.Primary.Red200, 
-                MaterialSkin.Accent.Orange700, 
+                MaterialSkin.Primary.Red600,
+                MaterialSkin.Primary.Red700,
+                MaterialSkin.Primary.Red200,
+                MaterialSkin.Accent.Orange700,
                 MaterialSkin.TextShade.WHITE
             );
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
