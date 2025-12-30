@@ -63,7 +63,7 @@
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(794, 383);
+            materialTabControl1.Size = new Size(1914, 1013);
             materialTabControl1.TabIndex = 0;
             materialTabControl1.TabStop = false;
             // 
@@ -73,7 +73,7 @@
             Order_tab.ImageKey = "Order.png";
             Order_tab.Location = new Point(4, 32);
             Order_tab.Name = "Order_tab";
-            Order_tab.Size = new Size(786, 347);
+            Order_tab.Size = new Size(1906, 977);
             Order_tab.TabIndex = 2;
             Order_tab.Text = "Orders";
             // 
@@ -157,7 +157,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(materialTabControl1);
             DoubleBuffered = false;
             DrawerAutoHide = false;
