@@ -31,8 +31,13 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
+            Dashboard_tab = new TabPage();
             Order_tab = new TabPage();
+            panel3 = new Panel();
+            Order_panel = new FlowLayoutPanel();
+            materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             panel2 = new Panel();
             Subtotal_label = new MaterialSkin.Controls.MaterialLabel();
             Discoount_Label = new MaterialSkin.Controls.MaterialLabel();
@@ -43,17 +48,17 @@
             Total_label = new MaterialSkin.Controls.MaterialLabel();
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            Transactions_tab = new TabPage();
-            Dashboard_tab = new TabPage();
-            DeliveryItems_tab = new TabPage();
             Inventory_tab = new TabPage();
+            Transactions_tab = new TabPage();
             ReturnRefund_tab = new TabPage();
             Profile_tab = new TabPage();
             TabControlIcons = new ImageList(components);
+            CurrentOrder_panel = new FlowLayoutPanel();
             materialTabControl1.SuspendLayout();
             Order_tab.SuspendLayout();
+            panel3.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,11 +66,10 @@
             // 
             materialTabControl1.AllowDrop = true;
             materialTabControl1.Appearance = TabAppearance.FlatButtons;
-            materialTabControl1.Controls.Add(Order_tab);
-            materialTabControl1.Controls.Add(Transactions_tab);
             materialTabControl1.Controls.Add(Dashboard_tab);
-            materialTabControl1.Controls.Add(DeliveryItems_tab);
+            materialTabControl1.Controls.Add(Order_tab);
             materialTabControl1.Controls.Add(Inventory_tab);
+            materialTabControl1.Controls.Add(Transactions_tab);
             materialTabControl1.Controls.Add(ReturnRefund_tab);
             materialTabControl1.Controls.Add(Profile_tab);
             materialTabControl1.Depth = 0;
@@ -82,9 +86,21 @@
             materialTabControl1.TabIndex = 0;
             materialTabControl1.TabStop = false;
             // 
+            // Dashboard_tab
+            // 
+            Dashboard_tab.ImageKey = "Dashboard.png";
+            Dashboard_tab.Location = new Point(4, 32);
+            Dashboard_tab.Name = "Dashboard_tab";
+            Dashboard_tab.Padding = new Padding(3);
+            Dashboard_tab.Size = new Size(1906, 977);
+            Dashboard_tab.TabIndex = 0;
+            Dashboard_tab.Text = "Dashboard";
+            Dashboard_tab.UseVisualStyleBackColor = true;
+            // 
             // Order_tab
             // 
             Order_tab.BackColor = SystemColors.ControlLight;
+            Order_tab.Controls.Add(panel3);
             Order_tab.Controls.Add(panel1);
             Order_tab.ImageKey = "Order.png";
             Order_tab.Location = new Point(4, 32);
@@ -93,17 +109,75 @@
             Order_tab.TabIndex = 2;
             Order_tab.Text = "Orders";
             // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ButtonFace;
+            panel3.Controls.Add(Order_panel);
+            panel3.Controls.Add(materialTextBox21);
+            panel3.Location = new Point(3, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1327, 971);
+            panel3.TabIndex = 1;
+            // 
+            // Order_panel
+            // 
+            Order_panel.Location = new Point(19, 93);
+            Order_panel.Name = "Order_panel";
+            Order_panel.Size = new Size(1283, 856);
+            Order_panel.TabIndex = 1;
+            // 
+            // materialTextBox21
+            // 
+            materialTextBox21.AnimateReadOnly = false;
+            materialTextBox21.BackgroundImageLayout = ImageLayout.None;
+            materialTextBox21.CharacterCasing = CharacterCasing.Normal;
+            materialTextBox21.Depth = 0;
+            materialTextBox21.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTextBox21.HideSelection = true;
+            materialTextBox21.Hint = "Search";
+            materialTextBox21.LeadingIcon = null;
+            materialTextBox21.Location = new Point(17, 18);
+            materialTextBox21.MaxLength = 32767;
+            materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
+            materialTextBox21.Name = "materialTextBox21";
+            materialTextBox21.PasswordChar = '\0';
+            materialTextBox21.PrefixSuffixText = null;
+            materialTextBox21.ReadOnly = false;
+            materialTextBox21.RightToLeft = RightToLeft.No;
+            materialTextBox21.SelectedText = "";
+            materialTextBox21.SelectionLength = 0;
+            materialTextBox21.SelectionStart = 0;
+            materialTextBox21.ShortcutsEnabled = true;
+            materialTextBox21.Size = new Size(731, 48);
+            materialTextBox21.TabIndex = 0;
+            materialTextBox21.TabStop = false;
+            materialTextBox21.TextAlign = HorizontalAlignment.Left;
+            materialTextBox21.TrailingIcon = null;
+            materialTextBox21.UseSystemPasswordChar = false;
+            // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(CurrentOrder_panel);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(materialButton1);
-            panel1.Controls.Add(materialLabel1);
             panel1.Location = new Point(1336, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(567, 971);
             panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Top;
+            pictureBox1.Image = Properties.Resources.Current_Order;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(567, 89);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -246,19 +320,15 @@
             materialButton1.UseAccentColor = false;
             materialButton1.UseVisualStyleBackColor = true;
             // 
-            // materialLabel1
+            // Inventory_tab
             // 
-            materialLabel1.BackColor = Color.White;
-            materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Roboto", 48F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
-            materialLabel1.HighEmphasis = true;
-            materialLabel1.Location = new Point(13, 14);
-            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(540, 55);
-            materialLabel1.TabIndex = 1;
-            materialLabel1.Text = "Current Order";
+            Inventory_tab.ImageKey = "Inventory.png";
+            Inventory_tab.Location = new Point(4, 32);
+            Inventory_tab.Name = "Inventory_tab";
+            Inventory_tab.Size = new Size(1906, 977);
+            Inventory_tab.TabIndex = 6;
+            Inventory_tab.Text = "Inventory";
+            Inventory_tab.UseVisualStyleBackColor = true;
             // 
             // Transactions_tab
             // 
@@ -270,37 +340,6 @@
             Transactions_tab.Size = new Size(1906, 977);
             Transactions_tab.TabIndex = 1;
             Transactions_tab.Text = "Transactions";
-            // 
-            // Dashboard_tab
-            // 
-            Dashboard_tab.ImageKey = "Dashboard.png";
-            Dashboard_tab.Location = new Point(4, 32);
-            Dashboard_tab.Name = "Dashboard_tab";
-            Dashboard_tab.Padding = new Padding(3);
-            Dashboard_tab.Size = new Size(1906, 977);
-            Dashboard_tab.TabIndex = 0;
-            Dashboard_tab.Text = "Dashboard";
-            Dashboard_tab.UseVisualStyleBackColor = true;
-            // 
-            // DeliveryItems_tab
-            // 
-            DeliveryItems_tab.ImageKey = "Delivery.png";
-            DeliveryItems_tab.Location = new Point(4, 32);
-            DeliveryItems_tab.Name = "DeliveryItems_tab";
-            DeliveryItems_tab.Size = new Size(1906, 977);
-            DeliveryItems_tab.TabIndex = 3;
-            DeliveryItems_tab.Text = "Delivery";
-            DeliveryItems_tab.UseVisualStyleBackColor = true;
-            // 
-            // Inventory_tab
-            // 
-            Inventory_tab.ImageKey = "Inventory.png";
-            Inventory_tab.Location = new Point(4, 32);
-            Inventory_tab.Name = "Inventory_tab";
-            Inventory_tab.Size = new Size(1906, 977);
-            Inventory_tab.TabIndex = 6;
-            Inventory_tab.Text = "Inventory";
-            Inventory_tab.UseVisualStyleBackColor = true;
             // 
             // ReturnRefund_tab
             // 
@@ -335,6 +374,13 @@
             TabControlIcons.Images.SetKeyName(5, "Return.png");
             TabControlIcons.Images.SetKeyName(6, "Transaction.png");
             // 
+            // CurrentOrder_panel
+            // 
+            CurrentOrder_panel.Location = new Point(23, 115);
+            CurrentOrder_panel.Name = "CurrentOrder_panel";
+            CurrentOrder_panel.Size = new Size(516, 375);
+            CurrentOrder_panel.TabIndex = 5;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -354,7 +400,9 @@
             WindowState = FormWindowState.Maximized;
             materialTabControl1.ResumeLayout(false);
             Order_tab.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -364,14 +412,12 @@
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
         private TabPage Dashboard_tab;
         private TabPage Transactions_tab;
-        private TabPage DeliveryItems_tab;
         private TabPage Profile_tab;
         private TabPage ReturnRefund_tab;
         private TabPage Inventory_tab;
         private ImageList TabControlIcons;
         private TabPage Order_tab;
         private Panel panel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private Panel panel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
@@ -382,5 +428,10 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private PictureBox pictureBox1;
+        private Panel panel3;
+        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
+        private FlowLayoutPanel Order_panel;
+        private FlowLayoutPanel CurrentOrder_panel;
     }
 }
