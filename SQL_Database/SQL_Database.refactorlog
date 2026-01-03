@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="e2227506-ca29-47f2-88c8-145aa4b60b75" ChangeDateTime="01/03/2026 12:28:56">
+    <Property Name="ElementName" Value="[dbo].[Users].[LastName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Users]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MiddleName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9b5f93ef-f353-40e8-97fb-db2ed2312952" ChangeDateTime="01/03/2026 12:36:51">
+    <Property Name="ElementName" Value="[dbo].[Account_User]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[AccountInformation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Account_AccountInformation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="af2e4c3a-94d9-47ae-80b7-c916e0e6a539" ChangeDateTime="01/03/2026 12:39:27">
+    <Property Name="ElementName" Value="[dbo].[Account_AccountInformation]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[AccountInformation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Account_AccountInformation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="582ce55a-4906-4521-8599-1fccf590834d" ChangeDateTime="01/03/2026 12:44:23">
+    <Property Name="ElementName" Value="[dbo].[Users]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[Accounts]" />
+  </Operation>
+</Operations>
