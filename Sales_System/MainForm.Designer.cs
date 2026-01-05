@@ -33,33 +33,12 @@
             materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             Dashboard_tab = new TabPage();
             Order_tab = new TabPage();
-            panel3 = new Panel();
-            Order_panel = new FlowLayoutPanel();
-            materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
-            panel1 = new Panel();
-            CurrentOrder_panel = new FlowLayoutPanel();
-            pictureBox1 = new PictureBox();
-            panel2 = new Panel();
-            Subtotal_label = new MaterialSkin.Controls.MaterialLabel();
-            Discoount_Label = new MaterialSkin.Controls.MaterialLabel();
-            ShippingFee_label = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            Total_label = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            materialButton1 = new MaterialSkin.Controls.MaterialButton();
             Inventory_tab = new TabPage();
             Transactions_tab = new TabPage();
             ReturnRefund_tab = new TabPage();
             Profile_tab = new TabPage();
             TabControlIcons = new ImageList(components);
             materialTabControl1.SuspendLayout();
-            Order_tab.SuspendLayout();
-            panel3.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // materialTabControl1
@@ -100,232 +79,12 @@
             // Order_tab
             // 
             Order_tab.BackColor = SystemColors.ControlLight;
-            Order_tab.Controls.Add(panel3);
-            Order_tab.Controls.Add(panel1);
             Order_tab.ImageKey = "Order.png";
             Order_tab.Location = new Point(4, 32);
             Order_tab.Name = "Order_tab";
             Order_tab.Size = new Size(1906, 977);
             Order_tab.TabIndex = 2;
             Order_tab.Text = "Orders";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.ButtonFace;
-            panel3.Controls.Add(Order_panel);
-            panel3.Controls.Add(materialTextBox21);
-            panel3.Location = new Point(3, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1327, 971);
-            panel3.TabIndex = 1;
-            // 
-            // Order_panel
-            // 
-            Order_panel.Location = new Point(19, 93);
-            Order_panel.Name = "Order_panel";
-            Order_panel.Size = new Size(1283, 856);
-            Order_panel.TabIndex = 1;
-            // 
-            // materialTextBox21
-            // 
-            materialTextBox21.AnimateReadOnly = false;
-            materialTextBox21.BackgroundImageLayout = ImageLayout.None;
-            materialTextBox21.CharacterCasing = CharacterCasing.Normal;
-            materialTextBox21.Depth = 0;
-            materialTextBox21.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox21.HideSelection = true;
-            materialTextBox21.Hint = "Search";
-            materialTextBox21.LeadingIcon = null;
-            materialTextBox21.Location = new Point(17, 18);
-            materialTextBox21.MaxLength = 32767;
-            materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox21.Name = "materialTextBox21";
-            materialTextBox21.PasswordChar = '\0';
-            materialTextBox21.PrefixSuffixText = null;
-            materialTextBox21.ReadOnly = false;
-            materialTextBox21.RightToLeft = RightToLeft.No;
-            materialTextBox21.SelectedText = "";
-            materialTextBox21.SelectionLength = 0;
-            materialTextBox21.SelectionStart = 0;
-            materialTextBox21.ShortcutsEnabled = true;
-            materialTextBox21.Size = new Size(731, 48);
-            materialTextBox21.TabIndex = 0;
-            materialTextBox21.TabStop = false;
-            materialTextBox21.TextAlign = HorizontalAlignment.Left;
-            materialTextBox21.TrailingIcon = null;
-            materialTextBox21.UseSystemPasswordChar = false;
-            // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(CurrentOrder_panel);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(materialButton1);
-            panel1.Location = new Point(1336, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(567, 971);
-            panel1.TabIndex = 0;
-            // 
-            // CurrentOrder_panel
-            // 
-            CurrentOrder_panel.Location = new Point(23, 115);
-            CurrentOrder_panel.Name = "CurrentOrder_panel";
-            CurrentOrder_panel.Size = new Size(516, 375);
-            CurrentOrder_panel.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Top;
-            pictureBox1.Image = Properties.Resources.Current_Order;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(567, 89);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.Control;
-            panel2.Controls.Add(Subtotal_label);
-            panel2.Controls.Add(Discoount_Label);
-            panel2.Controls.Add(ShippingFee_label);
-            panel2.Controls.Add(materialLabel5);
-            panel2.Controls.Add(materialLabel4);
-            panel2.Controls.Add(materialLabel3);
-            panel2.Controls.Add(Total_label);
-            panel2.Controls.Add(materialLabel2);
-            panel2.ForeColor = SystemColors.ControlText;
-            panel2.Location = new Point(23, 539);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(516, 338);
-            panel2.TabIndex = 3;
-            // 
-            // Subtotal_label
-            // 
-            Subtotal_label.Depth = 0;
-            Subtotal_label.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
-            Subtotal_label.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            Subtotal_label.Location = new Point(192, 153);
-            Subtotal_label.MouseState = MaterialSkin.MouseState.HOVER;
-            Subtotal_label.Name = "Subtotal_label";
-            Subtotal_label.Size = new Size(145, 37);
-            Subtotal_label.TabIndex = 10;
-            Subtotal_label.Text = "246.00";
-            // 
-            // Discoount_Label
-            // 
-            Discoount_Label.Depth = 0;
-            Discoount_Label.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
-            Discoount_Label.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            Discoount_Label.Location = new Point(192, 190);
-            Discoount_Label.MouseState = MaterialSkin.MouseState.HOVER;
-            Discoount_Label.Name = "Discoount_Label";
-            Discoount_Label.Size = new Size(145, 37);
-            Discoount_Label.TabIndex = 9;
-            Discoount_Label.Text = "-50.00";
-            // 
-            // ShippingFee_label
-            // 
-            ShippingFee_label.Depth = 0;
-            ShippingFee_label.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
-            ShippingFee_label.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            ShippingFee_label.Location = new Point(192, 227);
-            ShippingFee_label.MouseState = MaterialSkin.MouseState.HOVER;
-            ShippingFee_label.Name = "ShippingFee_label";
-            ShippingFee_label.Size = new Size(145, 37);
-            ShippingFee_label.TabIndex = 8;
-            ShippingFee_label.Text = "90.00";
-            // 
-            // materialLabel5
-            // 
-            materialLabel5.Depth = 0;
-            materialLabel5.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            materialLabel5.Location = new Point(12, 153);
-            materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel5.Name = "materialLabel5";
-            materialLabel5.Size = new Size(148, 37);
-            materialLabel5.TabIndex = 7;
-            materialLabel5.Text = "Subtotal:";
-            materialLabel5.TextAlign = ContentAlignment.TopRight;
-            // 
-            // materialLabel4
-            // 
-            materialLabel4.Depth = 0;
-            materialLabel4.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            materialLabel4.Location = new Point(12, 190);
-            materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel4.Name = "materialLabel4";
-            materialLabel4.Size = new Size(148, 37);
-            materialLabel4.TabIndex = 6;
-            materialLabel4.Text = "Discount:";
-            materialLabel4.TextAlign = ContentAlignment.TopRight;
-            // 
-            // materialLabel3
-            // 
-            materialLabel3.Depth = 0;
-            materialLabel3.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            materialLabel3.Location = new Point(12, 227);
-            materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel3.Name = "materialLabel3";
-            materialLabel3.Size = new Size(148, 37);
-            materialLabel3.TabIndex = 5;
-            materialLabel3.Text = "Shipping Fee:";
-            materialLabel3.TextAlign = ContentAlignment.TopRight;
-            // 
-            // Total_label
-            // 
-            Total_label.Depth = 0;
-            Total_label.Font = new Font("Roboto", 48F, FontStyle.Bold, GraphicsUnit.Pixel);
-            Total_label.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
-            Total_label.Location = new Point(192, 264);
-            Total_label.MouseState = MaterialSkin.MouseState.HOVER;
-            Total_label.Name = "Total_label";
-            Total_label.Size = new Size(307, 64);
-            Total_label.TabIndex = 4;
-            Total_label.Text = "286.00";
-            // 
-            // materialLabel2
-            // 
-            materialLabel2.Depth = 0;
-            materialLabel2.Font = new Font("Roboto", 48F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
-            materialLabel2.Location = new Point(12, 264);
-            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(151, 64);
-            materialLabel2.TabIndex = 0;
-            materialLabel2.Text = "Total:";
-            materialLabel2.TextAlign = ContentAlignment.TopRight;
-            materialLabel2.Click += materialLabel2_Click;
-            // 
-            // materialButton1
-            // 
-            materialButton1.AutoSize = false;
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.Dock = DockStyle.Bottom;
-            materialButton1.FlatStyle = FlatStyle.Popup;
-            materialButton1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.Location = new Point(0, 903);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(567, 68);
-            materialButton1.TabIndex = 2;
-            materialButton1.Text = "Checkout";
-            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = true;
             // 
             // Inventory_tab
             // 
@@ -399,11 +158,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             WindowState = FormWindowState.Maximized;
             materialTabControl1.ResumeLayout(false);
-            Order_tab.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -417,21 +171,5 @@
         private TabPage Inventory_tab;
         private ImageList TabControlIcons;
         private TabPage Order_tab;
-        private Panel panel1;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private Panel panel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel Total_label;
-        private MaterialSkin.Controls.MaterialLabel Subtotal_label;
-        private MaterialSkin.Controls.MaterialLabel Discoount_Label;
-        private MaterialSkin.Controls.MaterialLabel ShippingFee_label;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private PictureBox pictureBox1;
-        private Panel panel3;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
-        private FlowLayoutPanel Order_panel;
-        private FlowLayoutPanel CurrentOrder_panel;
     }
 }
