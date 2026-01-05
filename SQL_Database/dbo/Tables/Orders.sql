@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Orders]
+(
+	[OrderId] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [OrderDate] DATETIME NOT NULL DEFAULT GETDATE(), 
+    [TotalAmount] DECIMAL(10, 2) NOT NULL, 
+    [PaymentMethod] NVARCHAR(50) NOT NULL
+)

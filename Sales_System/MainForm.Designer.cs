@@ -37,6 +37,7 @@
             Order_panel = new FlowLayoutPanel();
             materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
             panel1 = new Panel();
+            CurrentOrder_panel = new FlowLayoutPanel();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             Subtotal_label = new MaterialSkin.Controls.MaterialLabel();
@@ -53,7 +54,6 @@
             ReturnRefund_tab = new TabPage();
             Profile_tab = new TabPage();
             TabControlIcons = new ImageList(components);
-            CurrentOrder_panel = new FlowLayoutPanel();
             materialTabControl1.SuspendLayout();
             Order_tab.SuspendLayout();
             panel3.SuspendLayout();
@@ -167,6 +167,13 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(567, 971);
             panel1.TabIndex = 0;
+            // 
+            // CurrentOrder_panel
+            // 
+            CurrentOrder_panel.Location = new Point(23, 115);
+            CurrentOrder_panel.Name = "CurrentOrder_panel";
+            CurrentOrder_panel.Size = new Size(516, 375);
+            CurrentOrder_panel.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -373,13 +380,6 @@
             TabControlIcons.Images.SetKeyName(4, "Profile.png");
             TabControlIcons.Images.SetKeyName(5, "Return.png");
             TabControlIcons.Images.SetKeyName(6, "Transaction.png");
-            // 
-            // CurrentOrder_panel
-            // 
-            CurrentOrder_panel.Location = new Point(23, 115);
-            CurrentOrder_panel.Name = "CurrentOrder_panel";
-            CurrentOrder_panel.Size = new Size(516, 375);
-            CurrentOrder_panel.TabIndex = 5;
             // 
             // MainForm
             // 
